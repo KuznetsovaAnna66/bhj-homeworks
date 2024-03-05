@@ -23,8 +23,6 @@ let timeInSeconds = getTimeInSeconds(time);
 timer.textContent = displayTime(timeInSeconds);
 let counter = setInterval(countInterval, 1000);
 
-const downloadLink = document.getElementById("download-link");
-
 function countInterval() {
   timeInSeconds--;
   timer.textContent = displayTime(timeInSeconds);
@@ -33,8 +31,8 @@ function countInterval() {
     timer.textContent = displayTime(0);
     clearInterval(counter);
     alert("Вы победили в конкурсе!");
-    location = "https://www.w3schools.com";
-    // downloadLink.click();
+    document.location.href =
+      "https://www.garant.ru/files/4/7/609374/dogovor_autsorsing.doc";
   }
 }
 
